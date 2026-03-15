@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Super Advanced Tshirt Store</title>
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<!-- Custom CSS -->
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader"><div class="spinner"></div></div>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold">TshirtStore</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link">Home</a></li>
+        <li class="nav-item"><a class="nav-link">Shop</a></li>
+        <li class="nav-item"><a class="nav-link">About</a></li>
+        <li class="nav-item"><a class="nav-link">Contact</a></li>
+        <li class="nav-item">
+          <a class="nav-link position-relative">
+            <i class="fa fa-shopping-cart"></i>
+            <span id="cart-count" class="badge bg-dark">0</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO SLIDER -->
+<section class="hero">
+  <div id="heroSlider" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b" class="d-block w-100">
+        <div class="carousel-caption">
+          <h1>Summer Collection</h1>
+          <p>Premium Cotton T-Shirts</p>
+          <button class="btn btn-dark">Shop Now</button>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c" class="d-block w-100">
+        <div class="carousel-caption">
+          <h1>Street Style</h1>
+          <p>Modern Fashion Design</p>
+          <button class="btn btn-dark">Shop Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FILTER + SEARCH -->
+<section class="filter text-center py-4">
+  <button class="btn btn-outline-dark filter-btn" data-filter="all">All</button>
+  <button class="btn btn-outline-dark filter-btn" data-filter="men">Men</button>
+  <button class="btn btn-outline-dark filter-btn" data-filter="women">Women</button>
+  <input type="text" id="search" placeholder="Search Products" class="ms-3 p-1">
+</section>
+
+<!-- PRODUCTS GRID -->
+<section class="products">
+  <div class="container">
+    <div class="row g-4" id="product-list">
+      <div class="col-md-3 product" data-category="men">
+        <div class="product-card">
+          <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab" class="img-fluid">
+          <div class="icons">
+            <i class="fa fa-heart wishlist"></i>
+            <i class="fa fa-eye quick-view"></i>
+          </div>
+          <h5>Urban T-Shirt</h5>
+          <p>$30</p>
+          <button class="btn btn-dark add-cart">Add To Cart</button>
+        </div>
+      </div>
+      <div class="col-md-3 product" data-category="women">
+        <div class="product-card">
+          <img src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f" class="img-fluid">
+          <div class="icons">
+            <i class="fa fa-heart wishlist"></i>
+            <i class="fa fa-eye quick-view"></i>
+          </div>
+          <h5>Classic Tee</h5>
+          <p>$25</p>
+          <button class="btn btn-dark add-cart">Add To Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter text-center py-5">
+  <h3>Subscribe To Our Newsletter</h3>
+  <input type="email" placeholder="Enter your email">
+  <button class="btn btn-light">Subscribe</button>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer py-4">
+  <div class="container text-center text-white">
+    <p>© 2026 TshirtStore. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<!-- QUICK VIEW MODAL -->
+<div id="quickViewModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img src="" id="modal-img" class="img-fluid mb-3">
+    <h5 id="modal-title"></h5>
+    <p id="modal-price"></p>
+    <button class="btn btn-dark add-cart">Add To Cart</button>
+  </div>
+</div>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
